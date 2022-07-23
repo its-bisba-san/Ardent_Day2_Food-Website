@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 text-center" style="padding: 40px;">
+            <div class="container-fluid" style="padding-left: 0px; padding-right: 0px;">
+                <div class="row">
+                    <div class="col-sm-5 btn btn-success" style="text-align: center;">
+                        {{title}}
+                    </div>
+                </div>
+            </div>
+        <div class="container.box" style="">
+            <table class="table table-striped">
+                <thead>
+                    <tr class="text-down">
+                        <th>Item</th>
+                        <th>Amount</th>
+                        <th>Cateogry</th>
+                        <th>Location</th>
+                        <th>Quantity</th>
+                        <th>Spend On</th>
+                        <th>Created On</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="text-down" *ngFor="let entry of homepage">
+                        <td>{{entry.item}}</td>
+                        <td>{{entry.amount}}</td>
+                        <td>{{entry.category}}</td>
+                        <td>{{entry.location}}</td>
+                        <td>{{entry.quantity}}</td>
+                        <td>{{entry.spendOn | date : 'short'}}</td>
+                        <td>{{entry.createdOn}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
